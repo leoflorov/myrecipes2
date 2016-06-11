@@ -58,7 +58,7 @@
                 android:text="@string/add_recipe_view"
                 android:id="@+id/add_recipe_name"
                 android:textStyle="bold"
-                android:layout_alignBottom="@+id/editText"
+                android:layout_alignBottom="@+id/recipe_name"
                 android:layout_below="@+id/autoCompleteTextView1"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -68,7 +68,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
+                android:id="@+id/recipe_name"
                 android:layout_below="@+id/autoCompleteTextView1"
                 android:layout_toRightOf="@+id/add_category_TextView"
                 android:layout_toEndOf="@+id/add_category_TextView"
@@ -81,12 +81,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textAutoComplete"
-                android:id="@+id/editText2"
+                android:id="@+id/add_ingredients_txt"
                 android:layout_below="@+id/ingridient_txt_view"
                 android:layout_alignLeft="@+id/ingridient_txt_view"
                 android:layout_alignStart="@+id/ingridient_txt_view"
-                android:layout_alignRight="@+id/editText"
-                android:layout_alignEnd="@+id/editText" />
+                android:layout_alignRight="@+id/recipe_name"
+                android:layout_alignEnd="@+id/recipe_name" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -116,13 +116,41 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText3"
+                android:id="@+id/add_instructions_txt"
                 android:layout_below="@+id/instruction_textview"
                 android:layout_alignLeft="@+id/instruction_textview"
                 android:layout_alignStart="@+id/instruction_textview"
-                android:layout_alignRight="@+id/editText2"
-                android:layout_alignEnd="@+id/editText2"
+                android:layout_alignRight="@+id/add_ingredients_txt"
+                android:layout_alignEnd="@+id/add_ingredients_txt"
                 android:inputType="textImeMultiLine" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить рецепт"
+                android:id="@+id/saveRecipeButton"
+                android:layout_below="@+id/add_instructions_txt"
+                android:layout_alignLeft="@+id/add_instructions_txt"
+                android:layout_alignStart="@+id/add_instructions_txt"
+                android:layout_marginTop="49dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Показать"
+                android:id="@+id/btnRead"
+                android:layout_alignTop="@+id/saveRecipeButton"
+                android:layout_toRightOf="@+id/saveRecipeButton"
+                android:layout_alignRight="@+id/add_instructions_txt"
+                android:layout_alignEnd="@+id/add_instructions_txt" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Очистить"
+                android:id="@+id/btnClear"
+                android:layout_below="@+id/saveRecipeButton"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <android.support.design.widget.NavigationView
