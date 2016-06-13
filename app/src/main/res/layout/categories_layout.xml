@@ -34,7 +34,8 @@
                 android:background="#ffffff"
                 android:padding="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -46,7 +47,8 @@
                 android:background="#ffffff"
                 android:padding="5dp"
                 android:contentDescription="@string/name_soupButton"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
 
         </TableRow>
 
@@ -66,7 +68,8 @@
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -78,7 +81,8 @@
                 android:padding="-5dp"
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
         </TableRow>
 
         <TableRow
@@ -95,7 +99,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_meatButton"
                 android:padding="5dp"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -107,7 +112,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_chickenButton"
                 android:padding="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
         </TableRow>
 
         <TableRow
@@ -126,7 +132,8 @@
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -138,7 +145,8 @@
                 android:padding="-5dp"
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -154,7 +162,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_vtoroeButton"
                 android:padding="5dp"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -166,7 +175,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_fishButton"
                 android:padding="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp"/>
         </TableRow>
 
         <TableRow
@@ -185,7 +195,8 @@
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -197,7 +208,8 @@
                 android:padding="-5dp"
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp"/>
         </TableRow>
 
         <TableRow
@@ -214,7 +226,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_vegetablesButton"
                 android:padding="5dp"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -226,7 +239,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_vypechkaButton"
                 android:padding="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
         </TableRow>
 
         <TableRow
@@ -245,7 +259,8 @@
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -257,7 +272,8 @@
                 android:padding="-5dp"
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp" />
         </TableRow>
 
         <TableRow
@@ -274,7 +290,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_drinksButton"
                 android:padding="5dp"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -286,7 +303,8 @@
                 android:background="#ffffff"
                 android:contentDescription="@string/name_prazdnikiButton"
                 android:padding="5dp"
-                android:layout_marginLeft="1.5dp" />
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp"/>
         </TableRow>
 
         <TableRow
@@ -305,7 +323,8 @@
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
                 android:clickable="true"
-                android:layout_marginRight="1.5dp" />
+                android:layout_marginRight="1.5dp"
+                android:layout_marginEnd="1.5dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -317,6 +336,7 @@
                 android:padding="-5dp"
                 android:background="#ffffff"
                 android:layout_marginBottom="5dp"
+                android:layout_marginStart="1.5dp"
                 android:layout_marginLeft="1.5dp" />
         </TableRow>
 

@@ -17,7 +17,7 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
     private DatabaseHelper mDataBaseHelper;
     private SQLiteDatabase mSQLiteDatabase;
     Button btnAdd;
-    EditText etName, etIngredients, etInstructions, etPhoto;
+    EditText etCategory, etName, etIngredients, etInstruction, etPhoto;
     DatabaseHelper dbHelper;
 
     @Override
@@ -28,9 +28,10 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
         btnAdd = (Button) findViewById(R.id.saveRecipeButton);
         btnAdd.setOnClickListener(this);
 
+        etCategory = (EditText) findViewById(R.id.category_input_txt);
         etName = (EditText) findViewById(R.id.recipe_name);
         etIngredients = (EditText) findViewById(R.id.add_ingredients_txt);
-        etInstructions = (EditText) findViewById(R.id.add_instructions_txt);
+        etInstruction = (EditText) findViewById(R.id.add_instructions_txt);
 
         dbHelper = new DatabaseHelper(this);
 
@@ -48,7 +49,7 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
 
         String[] categoriesAutoComplete = {"Салаты", "Супы", "Вторые блюда", "Напитки", "Десерты", "Курица", "Рыба", "Мясо", "Праздники"};
 
-        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.category_input_txt);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, categoriesAutoComplete);
         textView.setAdapter(adapter);
 
@@ -70,9 +71,10 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
 
+        String category = etCategory.getText().toString();
         String name = etName.getText().toString();
         String ingredients = etIngredients.getText().toString();
-        String instructions = etInstructions.getText().toString();
+        String instruction = etInstruction.getText().toString();
 
 
         SQLiteDatabase database = dbHelper.getWritableDatabase();
@@ -83,9 +85,10 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
         switch (v.getId()) {
 
             case R.id.saveRecipeButton:
+                contentValues.put(DatabaseHelper.CATEGORY_NAME_COLUMN, category);
                 contentValues.put(DatabaseHelper.RECIPE_NAME_COLUMN, name);
                 contentValues.put(DatabaseHelper.INGREDIENTS_COLUMN, ingredients);
-                contentValues.put(DatabaseHelper.INSTRUCTION_COLUMN, instructions);
+                contentValues.put(DatabaseHelper.INSTRUCTION_COLUMN, instruction);
 
                 database.insert(DatabaseHelper.DATABASE_TABLE, null, contentValues);
                 break;
@@ -95,14 +98,16 @@ public class AddRecipeActivity extends Activity implements View.OnClickListener 
 
                 if (cursor.moveToFirst()) {
                     int idIndex = cursor.getColumnIndex(DatabaseHelper._ID);
+                    int categoryIndex = cursor.getColumnIndex(DatabaseHelper.CATEGORY_NAME_COLUMN);
                     int nameIndex = cursor.getColumnIndex(DatabaseHelper.RECIPE_NAME_COLUMN);
                     int ingredientsIndex = cursor.getColumnIndex(DatabaseHelper.INGREDIENTS_COLUMN);
-                    int instructionsIndex = cursor.getColumnIndex(DatabaseHelper.INSTRUCTION_COLUMN);
+                    int instructionIndex = cursor.getColumnIndex(DatabaseHelper.INSTRUCTION_COLUMN);
                     do {
                         Log.d("mLog", "ID = " + cursor.getInt(idIndex) +
+                                ", category = " + cursor.getString(categoryIndex) +
                                 ", name = " + cursor.getString(nameIndex) +
                                 ", ingredients = " + cursor.getString(ingredientsIndex) +
-                                ", instructions = " + cursor.getString(instructionsIndex));
+                                ", instruction = " + cursor.getString(instructionIndex));
                     } while (cursor.moveToNext());
                 } else
                     Log.d("mLog", "0 rows");

@@ -15,7 +15,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
     //имя таблицы
     public static final String DATABASE_TABLE = "recipes";
     //названия столбцов
-    public static final String RECIPE_NAME_COLUMN = "recipe_name";
+    public static final String CATEGORY_NAME_COLUMN = "category";
+    public static final String RECIPE_NAME_COLUMN = "name";
     public static final String INSTRUCTION_COLUMN = "instruction";
     public static final String PHOTO_COLUMN = "photo";
     public static final String INGREDIENTS_COLUMN = "ingredients";
@@ -29,14 +30,14 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-//    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
+//    public DatabaseHelper (Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
 //        super(context, name, factory, version, errorHandler);
 //    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + DATABASE_TABLE + "(" + _ID
-                + " integer primary key," + RECIPE_NAME_COLUMN + " text," + INGREDIENTS_COLUMN + " text" + ")");
+                + " integer primary key," + CATEGORY_NAME_COLUMN + " text," + RECIPE_NAME_COLUMN + " text," + INGREDIENTS_COLUMN + " text, "+ INSTRUCTION_COLUMN + " text" + ")");
 
     }
     @Override
