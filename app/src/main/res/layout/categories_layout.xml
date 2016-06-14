@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="@color/light_green"
     android:orientation="vertical"
     android:fillViewport="false"
     android:focusable="false"
-    android:focusableInTouchMode="false">
+    android:focusableInTouchMode="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -342,4 +342,4 @@
 
     </TableLayout>
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>
