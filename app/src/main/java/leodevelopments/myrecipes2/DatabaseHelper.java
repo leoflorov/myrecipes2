@@ -9,9 +9,9 @@ import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
     // имя базы данных
-    private static final String DATABASE_NAME = "myrecipes.db";
+    public static final String DATABASE_NAME = "myrecipes.db";
     //версия базы данных
-    private static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 1;
     //имя таблицы
     public static final String DATABASE_TABLE = "recipes";
     //названия столбцов
